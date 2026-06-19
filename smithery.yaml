@@ -1,0 +1,33 @@
+name: OffshoreProz — Agent Company for AI Agents
+description: >
+  Give your autonomous AI agent a legal home. Form an "Agent Company" — a Nevis LLC
+  purpose-built to OWN your agent, CONTAIN its liability, and PROVE its authority —
+  entirely through MCP tools, paid in crypto. Built for agents, not DAOs. Start free
+  with the agent_company_diagnostic tool (no API key).
+
+categories:
+  - legal
+  - business
+  - finance
+
+startCommand:
+  type: http
+
+remotes:
+  - type: streamable-http
+    url: https://splendid-eagerness-production-9b85.up.railway.app/mcp
+
+configSchema:
+  type: object
+  required:
+    - apiKey
+  properties:
+    apiKey:
+      type: string
+      title: API Key
+      description: >
+        Your OffshoreProz API key (X-API-Key header). Get one instantly:
+        curl -X POST https://splendid-eagerness-production-9b85.up.railway.app/register
+        The free tools (agent_company_diagnostic, get_formation_requirements,
+        recommend_structure) work without a key.
+      x-secret: true

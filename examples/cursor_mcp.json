@@ -1,0 +1,8 @@
+{
+  "//": "Cursor — add to ~/.cursor/mcp.json (or .cursor/mcp.json in your project). Remote MCP server.",
+  "mcpServers": {
+    "offshoreproz-agent-company": {
+      "url": "https://server.smithery.ai/offshoreproz/agent-company/mcp"
+    }
+  }
+}

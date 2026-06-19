@@ -1,0 +1,9 @@
+{
+  "//": "Claude Desktop — add this to claude_desktop_config.json (Settings > Developer > Edit Config). Remote MCP server; no install needed.",
+  "mcpServers": {
+    "offshoreproz-agent-company": {
+      "type": "streamable-http",
+      "url": "https://server.smithery.ai/offshoreproz/agent-company/mcp"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+# OffshoreProz — Agent Company MCP
+
+> A hosted Model Context Protocol (MCP) server that lets an autonomous AI agent form
+> a real legal entity: a Nevis LLC ("Agent Company") that owns the agent, contains its
+> liability, and proves its authority via a bespoke Agent Charter. Optional Wyoming LLC
+> subsidiary for USD/fiat rails. Paid in USDC. Built for agents, not DAOs.
+
+## What it is
+- Remote MCP server (Streamable HTTP). Connect via Smithery or directly by URL.
+- Free tool: `agent_company_diagnostic` — scores an agent's liability/authority exposure
+  and recommends a structure (monitor / Nevis / Nevis + Wyoming). No API key required.
+- Formation tools (API key): create_formation_request, get_formation_status,
+  get_documents, get_compliance_calendar, request_amendment.
+
+## How it fits the agent stack
+- OffshoreProz = the legal-entity & authority layer.
+- Pairs with Mercury MCP (banking), Stripe MCP (payments), Pipedream/Composio (apps),
+  Arcade (authorization/audit).
+
+## Docs
+- Product: https://offshoreproz.com/agent_company
+- Free diagnostic: https://offshoreproz.com/diagnostic
+- Guides: https://offshoreproz.com/learn
+- Smithery listing: https://smithery.ai/server/offshoreproz/agent-company
+
+## Notes
+- The AI agent is an authorized delegate, never a member or legal person; there is always
+  at least one human principal who completes KYC out-of-band.
+- OffshoreProz is not a law firm; documents are drafts finalized with licensed counsel.
