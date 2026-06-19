@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
   "name": "io.github.tcgtracker-boop/agent-company-mcp",
-  "description": "MCP server that forms an Agent Company — a Nevis LLC purpose-built to own an autonomous AI agent, contain its liability, and prove its authority via a bespoke Agent Charter. Optional Wyoming USD subsidiary. Paid in USDC. Free agent_company_diagnostic tool.",
+  "description": "Agent Company: a Nevis LLC that owns your AI agent, contains its liability, proves authority.",
   "repository": {
     "url": "https://github.com/tcgtracker-boop/agent-company-mcp",
     "source": "github"
