@@ -1,12 +1,12 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
   "name": "io.github.tcgtracker-boop/agent-company-mcp",
-  "description": "Agent Company: a Nevis LLC that owns your AI agent, contains its liability, proves authority.",
+  "description": "Agent Company: a US or Nevis LLC that owns your AI agent, contains liability, proves authority.",
   "repository": {
     "url": "https://github.com/tcgtracker-boop/agent-company-mcp",
     "source": "github"
   },
-  "version": "2.10.0",
+  "version": "2.11.0",
   "websiteUrl": "https://offshoreproz.com/agent_company",
   "remotes": [
     {

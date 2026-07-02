@@ -1,8 +1,16 @@
 # OffshoreProz — Agent Company MCP
 
 **The MCP server that gives your autonomous AI agent a legal home.** Form an
-*Agent Company* — a Nevis LLC purpose-built to **own your agent**, **contain its
-liability**, and **prove its authority** — entirely through MCP tools, paid in USDC.
+*Agent Company* — a real company purpose-built to **own your agent**, **contain its
+liability**, and **prove its authority** — entirely through MCP tools. Two tiers:
+
+| Tier | What | Price | Pay by |
+|---|---|---|---|
+| 🇺🇸 **Wyoming Agent Company** | Standalone state-filed Wyoming LLC + EIN + registered agent (yr 1) + the full Agent Charter. Wyoming's charging-order protection extends even to single-member LLCs (W.S. 17-29-503); no state income tax; owners stay off the public record. | **$299** | Card (Stripe) **or** exact-amount USDC — *the agent can pay autonomously* |
+| 🏝️ **Nevis Agent Company** | The asset-protection fortress: Nevis LLC + 12-document Agent Charter suite + Sumsub KYC + optional Wyoming USD subsidiary. | **6,500 USDC** (launch) | USDC on-chain |
+
+New in v2.11: **`create_standalone_company`** — the $299 Wyoming tier, end to end
+(request → card/USDC payment → state filing → EIN → Wyoming-law document pack).
 
 [![Smithery](https://img.shields.io/badge/Smithery-Verified-orange)](https://smithery.ai/server/offshoreproz/agent-company)
 [![MCP](https://img.shields.io/badge/Model%20Context%20Protocol-server-blue)](https://modelcontextprotocol.io)
@@ -27,9 +35,9 @@ money and real counterparties. That creates two gaps no SaaS fixes:
 - **The authority gap.** When the agent signs or pays, how does a counterparty know
   it was *allowed* to? "Trust me, it's my bot" is not a legal answer.
 
-An **Agent Company** closes both: a Nevis LLC owns the agent and contains its risk,
-and a bespoke **Agent Charter** documents — to humans and machines — exactly what the
-agent may do.
+An **Agent Company** closes both: a real company (Wyoming or Nevis) owns the agent and
+contains its risk, and a bespoke **Agent Charter** documents — to humans and machines —
+exactly what the agent may do.
 
 > A DAO is on-chain token governance. An autonomous agent is different: it needs a
 > wrapper that shields its owner from its mistakes and proves what it is allowed to
