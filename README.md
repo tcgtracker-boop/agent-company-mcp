@@ -220,11 +220,12 @@ drafts finalized with licensed counsel; consult your own advisor about your situ
 
 - 🌐 Site: **[offshoreproz.com/agent_company](https://offshoreproz.com/agent_company)**
 - 🧪 Free diagnostic: **[offshoreproz.com/diagnostic](https://offshoreproz.com/diagnostic)**
+- 📖 Deep dive: **[Your AI agent has a wallet — who's liable when it moves the money?](docs/why-your-ai-agent-needs-a-legal-home.md)**
 - 📚 Guides: **[offshoreproz.com/learn](https://offshoreproz.com/learn)**
-  - Nevis vs Wyoming vs Cayman for AI agents
-  - The AI-agent liability gap
-  - The Agent Charter, explained
-  - How to form an Agent Company via MCP
+  - [Nevis vs Wyoming vs Cayman for AI agents](https://offshoreproz.com/learn/nevis-vs-wyoming-vs-cayman)
+  - [The AI-agent liability gap](https://offshoreproz.com/learn/ai-agent-liability-gap)
+  - [The Agent Charter, explained](https://offshoreproz.com/learn/agent-charter-explained)
+  - [How to form an Agent Company via MCP](https://offshoreproz.com/learn/form-agent-company-via-mcp)
 - 🔌 Smithery: **[smithery.ai/server/offshoreproz/agent-company](https://smithery.ai/server/offshoreproz/agent-company)**
 
 ---
