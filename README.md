@@ -72,6 +72,14 @@ Most agents run on crypto. If yours needs fiat (Stripe, US bank), add a wholly-o
 
 ---
 
+## Framework examples & the open authority spec
+
+Ready-to-run snippets in [`examples/`](examples/): Claude Agent SDK, LangChain/LangGraph,
+CrewAI, n8n, Claude Desktop, Cursor — plus a one-GET script to **verify any agent's
+authority** against the open [agent-mandate spec](https://offshoreproz.com/learn/agent-mandate-spec)
+(machine version: [`/mandate-spec.json`](https://offshoreproz.com/mandate-spec.json)).
+Case study: [the first LLC ordered by an AI agent](https://offshoreproz.com/learn/first-llc-formed-by-an-ai-agent).
+
 ## Quick start
 
 ### Option A — Smithery (one click)
