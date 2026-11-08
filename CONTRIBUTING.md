@@ -1,12 +1,15 @@
 # About this repository
 
 This is the **public listing** for the OffshoreProz Agent Company MCP server — a hosted,
-remote Model Context Protocol server. It contains the README, the Smithery/MCP manifests
-(`smithery.yaml`, `server.json`), `llms.txt`, and connection examples.
+remote Model Context Protocol server. It contains the README, the MCP registry manifests
+(`server.json` and `servers/offshoreproz-agent-api/server.json`), `llms.txt`, and connection examples.
 
-The server itself is **hosted** — you do not need to build or run anything here. Connect
-your MCP client to the URL in [`smithery.yaml`](smithery.yaml) or install via
-[Smithery](https://smithery.ai/server/offshoreproz/agent-company).
+The Agent Company server is **hosted** at `https://mcp.offshoreproz.com/mcp`. You do not
+need to build or run anything here.
+
+The OffshoreProz Agent API (`https://api.offshoreproz.com/mcp`) is a separate product for
+developers. Its registry manifest lives in `servers/offshoreproz-agent-api/` and is not
+the Agent Company server.
 
 The formation engine and document templates are proprietary and are not part of this repo.
 

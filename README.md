@@ -6,13 +6,13 @@ liability**, and **prove its authority** — entirely through MCP tools. Two tie
 
 | Tier | What | Price | Pay by |
 |---|---|---|---|
-| 🇺🇸 **Wyoming Agent Company** | Standalone state-filed Wyoming LLC + EIN + registered agent (yr 1) + the full Agent Charter. Wyoming's charging-order protection extends even to single-member LLCs (W.S. 17-29-503); no state income tax; owners stay off the public record. | **$299** | Card (Stripe) **or** exact-amount USDC — *the agent can pay autonomously* |
+| 🇺🇸 **Wyoming Agent Company** | Standalone state-filed Wyoming LLC + EIN + registered agent (yr 1) + the full Agent Charter. Wyoming's charging-order protection extends even to single-member LLCs (W.S. 17-29-503); no state income tax; owners stay off the public record. | **US$299** to start + **US$185/year** | Card (Stripe) **or** exact-amount USDC — *the agent can pay autonomously* |
 | 🏝️ **Nevis Agent Company** | The asset-protection fortress: Nevis LLC + 12-document Agent Charter suite + Sumsub KYC + optional Wyoming USD subsidiary. | **6,500 USDC** (launch) | USDC on-chain |
 
-New in v2.11: **`create_standalone_company`** — the $299 Wyoming tier, end to end
+New in v2.11: **`create_standalone_company`** — the Wyoming tier (US$299 to start + US$185/year), end to end
 (request → card/USDC payment → state filing → EIN → Wyoming-law document pack).
 
-[![Smithery](https://img.shields.io/badge/Smithery-Verified-orange)](https://smithery.ai/server/offshoreproz/agent-company)
+[![MCP Registry](https://img.shields.io/badge/MCP%20Registry-listed-blue)](https://registry.modelcontextprotocol.io/v0.1/servers?search=agent-company)
 [![MCP](https://img.shields.io/badge/Model%20Context%20Protocol-server-blue)](https://modelcontextprotocol.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Free diagnostic](https://img.shields.io/badge/Free-Agent%20Company%20Diagnostic-success)](https://offshoreproz.com/diagnostic)
@@ -82,40 +82,89 @@ Case study: [the first LLC ordered by an AI agent](https://offshoreproz.com/lear
 
 ## Quick start
 
-### Option A — Smithery (one click)
+The server is remote. Point any MCP client that speaks Streamable HTTP at
+`https://mcp.offshoreproz.com/mcp`. Nothing to install.
 
-Install from the [Smithery listing](https://smithery.ai/server/offshoreproz/agent-company)
-into Claude, Cursor, or any MCP client. The free `agent_company_diagnostic` tool runs
-without a key.
+### Claude Desktop
 
-### Option B — Claude Desktop / Cursor (remote MCP)
+Add this to `claude_desktop_config.json` (Settings → Developer → Edit Config).
+The same block is in [`examples/claude_desktop_config.json`](examples/claude_desktop_config.json).
 
-This is a **remote** server — point your client at the URL. See
-[`examples/claude_desktop_config.json`](examples/claude_desktop_config.json) and
-[`examples/cursor_mcp.json`](examples/cursor_mcp.json).
-
-```jsonc
+```json
 {
   "mcpServers": {
     "offshoreproz-agent-company": {
       "type": "streamable-http",
-      "url": "https://server.smithery.ai/offshoreproz/agent-company/mcp"
+      "url": "https://mcp.offshoreproz.com/mcp"
     }
   }
 }
 ```
 
-### Option C — get an API key (for formation tools)
+### Cursor
+
+Add this to `~/.cursor/mcp.json` (or `.cursor/mcp.json` in a project).
+See [`examples/cursor_mcp.json`](examples/cursor_mcp.json).
+
+```json
+{
+  "mcpServers": {
+    "offshoreproz-agent-company": {
+      "url": "https://mcp.offshoreproz.com/mcp"
+    }
+  }
+}
+```
+
+### Any Streamable HTTP client
+
+```json
+{
+  "mcpServers": {
+    "offshoreproz-agent-company": {
+      "type": "streamable-http",
+      "url": "https://mcp.offshoreproz.com/mcp"
+    }
+  }
+}
+```
+
+The free `agent_company_diagnostic` tool runs with no API key.
+
+### API key (formation tools)
 
 The diagnostic and discovery tools are free. To actually *form* a company you need a
 key — issued instantly, no signup:
 
 ```bash
-curl -X POST https://splendid-eagerness-production-9b85.up.railway.app/register
+curl -X POST https://mcp.offshoreproz.com/register
 ```
 
 Pass the returned key as the `X-API-Key` header. Full walkthrough in
 [`examples/quickstart.sh`](examples/quickstart.sh).
+
+### Agent API (separate server)
+
+The **OffshoreProz Agent API** is a different product for developers: a REST API
+plus its own MCP server for programmatic company formation (a Wyoming LLC or a
+Marshall Islands DAO LLC), with estimate, human confirmation, then create. It is
+not this Agent Company server.
+
+- MCP: `https://api.offshoreproz.com/mcp`
+- Docs: [offshoreproz.com/docs](https://offshoreproz.com/docs)
+- Config: [`examples/agent_api_mcp.json`](examples/agent_api_mcp.json)
+- Registry name: `io.github.tcgtracker-boop/offshoreproz-agent-api`
+
+```json
+{
+  "mcpServers": {
+    "offshoreproz-agent-api": {
+      "type": "streamable-http",
+      "url": "https://api.offshoreproz.com/mcp"
+    }
+  }
+}
+```
 
 ---
 
@@ -143,7 +192,7 @@ authority layer**, and it composes with the rest.
 | | **OffshoreProz Agent Company** | OtoCo / Genco | DIY: FileForms API + your own MCP |
 |---|---|---|---|
 | Shape | Hosted MCP your agent calls directly | Their AI agent operates companies | Filing API you wrap in your own MCP |
-| Connect *your* agent via MCP | ✅ native (Smithery / HTTP) | ⚠️ mostly their agent, not an open MCP | ✅ but you build the MCP |
+| Connect *your* agent via MCP | ✅ native (Streamable HTTP) | ⚠️ mostly their agent, not an open MCP | ✅ but you build the MCP |
 | Entity | Nevis LLC (asset protection) + optional Wyoming sub | US / on-chain standalone LLC | US states (50) |
 | Agent authority docs (Mandate / POA / machine-readable) | ✅ bespoke Agent Charter | ❌ | ❌ build it yourself |
 | Owner liability containment | ✅ charging-order protection | partial | depends on entity |
@@ -162,6 +211,9 @@ OffshoreProz gives the agent its legal identity. Pair it with:
 ---
 
 ## Pricing
+
+Wyoming Agent Company: **US$299** to start + **US$185/year** (card or USDC).
+Nevis is priced in USDC:
 
 | Item | USDC |
 |------|------|
@@ -208,15 +260,16 @@ No. The agent is an *authorized delegate*. There is always at least one human pr
 The agent is never a member, never a legal person, never a KYC subject.
 
 **Do I need to self-host or clone this repo?**
-No. The server is remote/hosted — connect your client to the URL or install via Smithery.
-This repo is the public listing, manifest, and examples.
+No. The server is remote/hosted — connect your client to
+`https://mcp.offshoreproz.com/mcp`. This repo is the public listing, manifest, and examples.
 
 **How is this different from a DAO wrapper?**
 A DAO is on-chain token governance. This is built for autonomous software agents that
 hold wallets and act off-chain — it shields the owner and proves the agent's authority.
 
 **What does it cost and how do I pay?**
-6,500 USDC launch for the Nevis Agent Company; pay in USDC on any of 6 chains.
+Wyoming Agent Company: **US$299** to start + **US$185/year**, by card or USDC.
+Nevis Agent Company: 6,500 USDC launch, on any of 6 chains.
 
 **Is OffshoreProz a law firm?**
 No. OffshoreProz is not a law firm and this is not legal or tax advice. Documents are
@@ -234,7 +287,9 @@ drafts finalized with licensed counsel; consult your own advisor about your situ
   - [The AI-agent liability gap](https://offshoreproz.com/learn/ai-agent-liability-gap)
   - [The Agent Charter, explained](https://offshoreproz.com/learn/agent-charter-explained)
   - [How to form an Agent Company via MCP](https://offshoreproz.com/learn/form-agent-company-via-mcp)
-- 🔌 Smithery: **[smithery.ai/server/offshoreproz/agent-company](https://smithery.ai/server/offshoreproz/agent-company)**
+- 🔌 MCP endpoint: **[https://mcp.offshoreproz.com/mcp](https://mcp.offshoreproz.com/mcp)**
+- 🗂️ Official MCP Registry: **[io.github.tcgtracker-boop/agent-company-mcp](https://registry.modelcontextprotocol.io/v0.1/servers?search=agent-company)**
+- 🛠️ Agent API (separate server): **[https://api.offshoreproz.com/mcp](https://api.offshoreproz.com/mcp)** — [docs](https://offshoreproz.com/docs)
 
 ---
 

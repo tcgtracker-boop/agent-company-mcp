@@ -1,0 +1,9 @@
+{
+  "//": "OffshoreProz Agent API — a separate server from Agent Company. Streamable HTTP. Docs: https://offshoreproz.com/docs",
+  "mcpServers": {
+    "offshoreproz-agent-api": {
+      "type": "streamable-http",
+      "url": "https://api.offshoreproz.com/mcp"
+    }
+  }
+}

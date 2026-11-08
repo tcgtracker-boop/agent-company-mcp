@@ -3,7 +3,7 @@
 import asyncio
 from langchain_mcp_adapters.client import MultiServerMCPClient
 
-MCP_URL = "https://splendid-eagerness-production-9b85.up.railway.app/mcp"
+MCP_URL = "https://mcp.offshoreproz.com/mcp"
 
 async def main():
     client = MultiServerMCPClient({

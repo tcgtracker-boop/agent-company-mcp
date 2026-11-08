@@ -1,17 +1,18 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.tcgtracker-boop/agent-company-mcp",
-  "description": "A legal home for AI agents: Wyoming $299 or Nevis LLC. Free diagnostic; agents pay in USDC/USDT.",
+  "title": "OffshoreProz Agent Company",
+  "description": "A legal home for AI agents: Wyoming LLC US$299 + US$185/yr, or Nevis. Free diagnostic.",
   "repository": {
     "url": "https://github.com/tcgtracker-boop/agent-company-mcp",
     "source": "github"
   },
-  "version": "2.16.0",
+  "version": "2.35.0",
   "websiteUrl": "https://offshoreproz.com/agent_company",
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://server.smithery.ai/offshoreproz/agent-company/mcp"
+      "url": "https://mcp.offshoreproz.com/mcp"
     }
   ]
 }
