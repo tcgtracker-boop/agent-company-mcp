@@ -1,0 +1,19 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.tcgtracker-boop/offshoreproz-agent-api",
+  "title": "OffshoreProz Agent API",
+  "description": "Developer MCP and REST API to form a Wyoming LLC or Marshall Islands DAO LLC.",
+  "repository": {
+    "url": "https://github.com/tcgtracker-boop/agent-company-mcp",
+    "source": "github",
+    "subfolder": "servers/offshoreproz-agent-api"
+  },
+  "version": "1.0.0",
+  "websiteUrl": "https://offshoreproz.com/docs",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.offshoreproz.com/mcp"
+    }
+  ]
+}

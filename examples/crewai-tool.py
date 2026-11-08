@@ -4,7 +4,7 @@ from crewai import Agent
 from crewai_tools import MCPServerAdapter
 
 server_params = {
-    "url": "https://splendid-eagerness-production-9b85.up.railway.app/mcp",
+    "url": "https://mcp.offshoreproz.com/mcp",
     "transport": "streamable-http",
 }
 

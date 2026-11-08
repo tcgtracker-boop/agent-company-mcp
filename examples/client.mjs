@@ -8,7 +8,7 @@
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 
-const URL = "https://server.smithery.ai/offshoreproz/agent-company/mcp?config=e30%3D";
+const URL = "https://mcp.offshoreproz.com/mcp";
 
 const client = new Client({ name: "demo", version: "1.0.0" }, { capabilities: {} });
 await client.connect(new StreamableHTTPClientTransport(new URL(URL)));
