@@ -83,7 +83,9 @@ Case study: [the first LLC ordered by an AI agent](https://offshoreproz.com/lear
 ## Quick start
 
 The server is remote. Point any MCP client that speaks Streamable HTTP at
-`https://mcp.offshoreproz.com/mcp`. Nothing to install.
+`https://mcp.offshoreproz.com/mcp`. Nothing to install. Cline should follow
+[`llms-install.md`](llms-install.md): its remote type is `streamableHttp`, and this
+repo is not a local server to clone or build.
 
 ### Claude Desktop
 
